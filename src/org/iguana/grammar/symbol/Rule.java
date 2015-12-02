@@ -27,22 +27,15 @@
 
 package org.iguana.grammar.symbol;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import iguana.parsetrees.slot.Action;
 import iguana.parsetrees.tree.RuleType;
 import iguana.utils.collections.hash.MurmurHash3;
-
 import org.iguana.util.generator.ConstructorCode;
 import org.iguana.util.generator.GeneratorUtil;
+
+import java.io.Serializable;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 
@@ -412,7 +405,9 @@ public class Rule implements ConstructorCode, Serializable, RuleType {
             
             this.attributes = rule.attributes;
 		}
-		
+
+		public Rule from (Symbol...symbols) { return addSymbols(symbols).build(); }
+
 		public Builder addSymbol(Symbol symbol) {
 			body.add(symbol);
 			return this;
