@@ -4,14 +4,10 @@ target
 classes/
 idea/
 .idea/
-.idea/*
 protocols/protocols.iml
 protocols/samples/*.json
-target
 .vagrant
-.idea
 .idea_modules
 *.pyc
 *.iml
 *.docker.tag
-*.idea

@@ -130,7 +130,7 @@ public abstract class AbstractGrammarGraphSymbolVisitor<T> implements ISymbolVis
 
 	@Override
 	public <E extends Symbol> T visit(Sequence<E> symbol) {
-		throw new UnexpectedSymbol(symbol, "grammar-to-graph transformation");
+		return visit((RegularExpression) symbol);
 	}
 
 	@Override
