@@ -67,7 +67,7 @@ public class Names implements GrammarTransformation {
 
         @Override
         public Symbol visit(Block symbol) {
-            return Block.block(Arrays.stream(symbol.getSymbols()).map(s -> visitSymbol(s)).toArray(Symbol[]::new));
+            return Block.block(Arrays.stream(symbol.getSymbols()).map(this::visitSymbol).toArray(Symbol[]::new));
         }
 
         @Override

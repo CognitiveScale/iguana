@@ -3,7 +3,7 @@ bin
 target
 classes/
 idea/
-.idea/
+.idea
 protocols/protocols.iml
 protocols/samples/*.json
 .vagrant
